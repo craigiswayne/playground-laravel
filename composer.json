@@ -31,6 +31,9 @@
         }
     },
     "scripts": {
+        "start:dev": [
+            "php artisan serve"
+        ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi"
@@ -46,6 +49,9 @@
             "@php -r \"file_exists('database/database.sqlite') || touch('database/database.sqlite');\"",
             "@php artisan migrate --graceful --ansi"
         ]
+    },
+    "scripts-descriptions": {
+        "start:dev": "Serves the laravel site in development mode"
     },
     "extra": {
         "laravel": {
